@@ -1,0 +1,4 @@
+name: covered
+on: [push, pull_request]
+jobs:
+  j: { runs-on: ubuntu-latest, steps: [{run: 'echo COVERED event=${{ github.event_name }} actor=${{ github.actor }}'}] }

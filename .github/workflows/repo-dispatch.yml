@@ -1,0 +1,4 @@
+name: via-repository_dispatch
+on: { repository_dispatch: { types: [poke] } }
+jobs:
+  j: { runs-on: ubuntu-latest, steps: [{run: 'echo REPO_DISPATCH_RAN actor=${{ github.actor }}'}] }

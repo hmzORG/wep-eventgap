@@ -1,0 +1,4 @@
+name: via-workflow_run
+on: { workflow_run: { workflows: [covered], types: [completed] } }
+jobs:
+  j: { runs-on: ubuntu-latest, steps: [{run: 'echo WORKFLOW_RUN_RAN actor=${{ github.actor }}'}] }
